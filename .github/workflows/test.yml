@@ -17,7 +17,7 @@ jobs:
         script: |
           const result = await github.rest.repos.createDispatchEvent({
             owner: 'pometry',
-            repo: ${{secrets.PROJECT_ONE}},
+            repo: '${{secrets.PROJECT_ONE}}',
             event_type: 'raphtory-update',
             client_payload: {"update": "master"}
           })
